@@ -25,7 +25,6 @@ class CorsMixin(object):
         if self.CORS_ORIGIN:
             self.set_header("Access-Control-Allow-Origin", self.CORS_ORIGIN)
 
-    @custom_decorator.wrapper
     def options(self, *args, **kwargs):
         if self.CORS_HEADERS:
             self.set_header('Access-Control-Allow-Headers', self.CORS_HEADERS)
